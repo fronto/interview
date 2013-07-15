@@ -33,9 +33,9 @@ public class RangeIntersectionQueryTest {
 
 	}
 
-	private void assertIntersects(Range oneToFive, Range twoToThree) {
-		assertTrue(oneToFive.instersects(twoToThree));
-		assertTrue(twoToThree.instersects(oneToFive));
+	private void assertIntersects(Range first, Range second) {
+		assertTrue(first.instersects(second));
+		assertTrue(second.instersects(first));
 	}
 
 	@Test
@@ -56,6 +56,17 @@ public class RangeIntersectionQueryTest {
 
 		assertDoesNotIntersect(oneToTwo, fourToFive);
 
+	}
+	
+	@Test
+	public void equivalentRangesIntersect() {
+		
+		Range oneToTwo = new Range(1,2);
+		Range sameAsOneToTwo = new Range(1,2);
+		
+		assertIntersects(oneToTwo, sameAsOneToTwo);
+		
+		
 	}
 
 }
