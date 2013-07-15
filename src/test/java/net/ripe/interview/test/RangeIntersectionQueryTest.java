@@ -1,9 +1,10 @@
 package net.ripe.interview.test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import net.ripe.interview.Range;
 
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class RangeIntersectionQueryTest {
 
