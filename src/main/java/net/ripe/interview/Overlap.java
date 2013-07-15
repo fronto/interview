@@ -28,7 +28,7 @@ public class Overlap {
 	}
 
 	// NB Skipped hashcode deliberately, as ordering of Range elements should not matter,
-	// but could unwittingly affect hashcode if implemented
+	// but could unwittingly cause different hashcodes for equivalent ranges if implemented without care
 
 	private boolean hasRange(Range range) {
 		return first.equals(range) || second.equals(range);
